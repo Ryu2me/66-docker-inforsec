@@ -11,16 +11,16 @@ services:
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
   pg-admin:
     image: dpage/pgadmin4:latest
-    container_name: pg-admin-ced1
+    container_name: pg-admin-ced2
     ports:
       - 4433:443
       - 8080:80
     environment:
       - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
-      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSsWORD}
   strapi:
     image: naskio/strapi:latest
-    container_name: my-app-ced1
+    container_name: my-app-ced3
     ports:
       - 1337:1337
     environment:
