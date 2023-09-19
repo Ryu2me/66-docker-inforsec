@@ -10,7 +10,7 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
   pg-admin:
-    image: dpage/pgadmin4:latest
+    image: ryu/myapp:1.0
     container_name: pg-admin-ced1
     ports:
       - 4433:443
