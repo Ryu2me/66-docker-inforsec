@@ -10,7 +10,7 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
   pg-admin:
-    image: ryu/myapp:1.0
+    image: dpage/pgadmin4:latest
     container_name: pg-admin-ced1
     ports:
       - 4433:443
@@ -19,7 +19,7 @@ services:
       - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
       - PGADMIN_DEFAULT_PASSWORD=150943
   strapi:
-    image: naskio/strapi:latest
+    image: ryu/myapp:1.0
     container_name: my-app-ced1
     ports:
       - 1337:1337
